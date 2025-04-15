@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <locale.h>
+#include <stdlib.h>
 
 int main() {
     setlocale(LC_ALL, "Portuguese");
@@ -46,9 +47,9 @@ int main() {
             printf("Seu chute foi menor que o numero secreto\n");
         }
 
-        tentativas++;
+        tentativas++
 
-        double pontosperdidos = (chute - numerosecreto ) /2.0;
+        double pontosperdidos = (double)abs(chute - numerosecreto ) /2.0;
         pontos = pontos - pontosperdidos;
         
     }
