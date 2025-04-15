@@ -18,11 +18,13 @@ int main() {
     scanf("%d", &nivel);
 
     int numero_tentativas;
-    if (nivel == 1) {
-        numero_tentativas = 20;
-    } else if (nivel == 2) {
+    switch (nivel)
+    {
+    case 1:
+    numero_tentativas = 20;
+    case 2:
         numero_tentativas = 15;
-    } else {
+    default:
         numero_tentativas = 6;
     }
 
