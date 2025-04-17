@@ -1,1 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char palavrasecreta[20];
+    sprintf(palavrasecreta, "Melancia");  // palavra secreta
+
+    int acertou = 0;
+    int enforcou = 0;
+
+    do {
+        // Começar o jogo!
+        char chute;
+        printf("Digite uma letra: ");
+        scanf("%c", &chute);
+
+        for (int i = 0; i < strlen(palavrasecreta); i++) {
+            if (palavrasecreta[i] == chute) {
+                printf("A posicao %d tem essa letra!\n", i);
+            }
+        }
+
+        // Aqui futuramente você pode atualizar acertou ou enforcou
+
+    } while (!acertou && !enforcou);
+
+    return 0;
+}
 
