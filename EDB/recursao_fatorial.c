@@ -8,7 +8,10 @@
     }
 int main()
 {
-int resultado = fatorial(3);
-printf("o resultado do fatorial de 3 é %d \n", resultado);
+int num, resultado;
+printf("Digite um número: ");
+scanf("%d", &num);
+resultado = fatorial(num);
+printf("o resultado do fatorial de %d é %d \n", num, resultado);
     return 0;
 }
